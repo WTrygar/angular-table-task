@@ -1,0 +1,28 @@
+<h1>Custom Table with data from JSON file, with search bar</h1>
+<hr />
+
+<label for="search">Search</label>
+<input
+  type="text"
+  name="search"
+  id="search"
+  placeholder="search by descritpion"
+  [formControl]="searchControl"
+/>
+
+<table>
+  <tr>
+    <th *ngFor="let column of headers | keyvalue">
+      <b>{{ column.value }}</b>
+    </th>
+  </tr>
+
+  <tr *ngFor="let row of filteredRows">
+    <td>{{ row.work_order_id }}</td>
+    <td>{{ row?.description }}</td>
+    <td>{{ row?.received_date }}</td>
+    <td>{{ row?.assigned_to[0]?.person_name ?? "-" }}</td>
+    <td>{{ row?.status }}</td>
+    <td>{{ row?.priority }}</td>
+  </tr>
+</table>
