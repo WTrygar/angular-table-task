@@ -1,6 +1,10 @@
-# Blog
+# Code Task
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+
+## Node Package Manager
+
+Run `npm install` to install Node Package Manager for this app to work.
 
 ## Development server
 
